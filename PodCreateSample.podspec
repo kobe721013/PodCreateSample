@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PodCreateSample'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Create a Pod lib test.'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,11 @@ TODO: Add long description of the pod here.
 
   s.subspec 'Sources' do |ss|
       ss.source_files = 'PodCreateSample/Sources/**/*'
-    end
+  end
+  
+  s.subspec 'Assets' do |ss|
+      ss.resource_bundles = {'PodTestResources' => ['PodCreateSample/Assets/*.*']}
+  end
 
   #s.source_files = 'PodCreateSample/Sources/**/*'
   
